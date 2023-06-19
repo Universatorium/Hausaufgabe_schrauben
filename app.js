@@ -12,6 +12,7 @@ mongoose.connect('mongodb+srv://Universator:<password>@cluster0.uxaphon.mongodb.
 })
 .catch(err => console.log(err));
 
+//Meldung beim Einloggen auf Port 3333
 app.get('/', (req, res) => {
   res.send('Schraub Deine Erwartungen nicht zu hoch!');
 });
