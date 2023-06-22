@@ -7,12 +7,13 @@ const chalk = require('chalk');
 const schraubenModel = require('./schraubenModel');
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://Universator:FAzG3CxIVhPFl1hS@cluster0.uxaphon.mongodb.net/schrauben24?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://Universator:<password>@cluster0.uxaphon.mongodb.net/schrauben24?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
   console.log('MongoDB connected...');
 })
 .catch(err => console.log(err));
 
+//Meldung beim Einloggen auf Port 3333
 app.get('/', (req, res) => {
   res.send('Schraub Deine Erwartungen nicht zu hoch!');
 });
@@ -37,4 +38,8 @@ app.get('/sales', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3333;
+<<<<<<< HEAD
 app.listen(PORT, () => console.log(chalk.blue.bgRed.bold(`Server is running on port ${PORT}`)));
+=======
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+>>>>>>> 4abf786391a4fa683bce04ea113fff7984470c78
