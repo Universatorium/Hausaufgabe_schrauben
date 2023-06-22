@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+const chalk = require('chalk');
 
 //Importiere das Schrauben Model
 const schraubenModel = require('./schraubenModel');
@@ -36,4 +37,4 @@ app.get('/sales', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3333;
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(PORT, () => console.log(chalk.blue.bgRed.bold(`Server is running on port ${PORT}`)));
